@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+/* CSS Document */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*imagens flexíveis*/
+/* img {
+  max-width: 100%;
+  text-align: center;
+  height: 100%;
+} */
+
+#perfil {
+  width: 17.9%;
+  height: 17.9%;
+  text-align: center;
+  padding: 3em;
+  border-radius: 50%;
+}
+
+body,
+html {
+  background: #ffffff;
+  color: #5f5f5f;
+  height: 100%;
+  overflow: auto;
+}
+
+
+.container {
+  display: flex;
+  align-items: center; /* Centralizar verticalmente */
+}
+
+.imagem {
+  width: 100px; /* Defina a largura da imagem */
+  height: 100px; /* Defina a altura da imagem */
+  background-image: url(fotoPerfil.jpg); /* Caminho da imagem */
+  background-size: cover; /* Redimensionar a imagem para cobrir a div */
+  margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+
+#conteudo {
+  /* Largura */
+  height: 100%;
+  width: 30%;
+  /* Alinha à esquerda */
+  float: left;
+}
+
+.interno {
+  padding: 10px;
+  height: auto;
+  color: black;
+  text-align: center;
+}
+
+#lateral1 {
+  /* Largura */
+  height: auto;
+  width: 35%;
+  /* Alinha à direita */
+  float: right;
+}
+
+#lateral2 {
+  /* Largura */
+  height: auto;
+  width: 35%;
+  /* Alinha à direita */
+  float: right;
+}
+
+h1 {
+  color: rgb(32, 23, 156);
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border: 2px solid rgb(32, 23, 156);
+  border-radius: 15px;
+}
+
+header {
+	background-color:  rgb(32, 23, 156);
+	position: fixed;
+	padding-top: 1vh;
+	width: 100%;
+
+}
+  
+header nav ul {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap; /* Adicione essa propriedade para permitir que os itens sejam empilhados em dispositivos menores */
+	justify-content: center; /* Centralizar horizontalmente os itens */
+}
+  
+header nav ul li {
+	margin-right: 0.5vw;
+}
+  
+header nav ul li a {
+	text-decoration: none;
+	padding: 5px 10px;
+	color: #ffffff;
+}
+
+aside{
+	background-color: rgb(52, 90, 214);
+	width: 20%;
+	height:100%;
+	display: grid;
+	position: fixed;
+	margin-top: 10vh;
+	grid-area: 1/1/4/13;
+}
+
+section{
+	display: flex;
+	max-width: 80%;
+	margin-left: 20%;
+	margin-top: 10%;
+}
+  
+
+/*seletores para desktops*/
+@media screen and (max-width: 1128px) {
+  #conteudo {
+    height: auto;
+    width: 100%;
+    float: none;
+  }
+
+  #lateral1 {
+    width: 100%;
+    float: none;
+    height: auto;
+    display: center;
+  }
+
+  #lateral2 {
+    width: 100%;
+    float: none;
+    height: auto;
+    display: right;
+  }
+}
+
+/*seletores para tablets*/
+@media screen and (max-width: 768px) {
+  #conteudo {
+    width: 100%;
+    float: none;
+    height: auto;
+  }
+
+  #lateral1 {
+    width:100%;
+  }
+}
